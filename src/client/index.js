@@ -11,7 +11,7 @@ const states = ['received', 'created', 'started', 'errored', 'failed', 'passed']
  */
 const client = mozaik => {
     const travis = new Travis(
-        'https://api.travis-ci.org',
+        process.env.TRAVIS_API_BASE_URL,
         process.env.TRAVIS_API_TOKEN,
         mozaik.request,
         mozaik.logger
